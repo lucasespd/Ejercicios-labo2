@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EJ_14
 {
-    internal class CalculadoraDeArea
+    public class CalculadoraDeArea
     {
         /* 
                 Realizar una clase llamada CalculoDeArea que posea 3 métodos de clase (estáticos) que realicen el

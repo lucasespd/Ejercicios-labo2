@@ -19,30 +19,40 @@ namespace EJ_12
 
 
             int n;
-            int acumNumeros = 0;          
+            string numeroString;
+            int acumNumeros = 0;
             int i = 0;
 
-            Console.WriteLine("ingrese numero a sumar: ");
-            int.TryParse(Console.ReadLine(), out n);
-            acumNumeros += n;
+            Console.WriteLine("Ingrese numero a sumar: ");
+            numeroString = Console.ReadLine();
+            while(!int.TryParse(numeroString, out n))
+            {
+                Console.WriteLine("Error. Reingrese numero");
+                numeroString = Console.ReadLine();
+            }
 
+            acumNumeros += n;
             Console.WriteLine("Continuar? s/n");
             char respuesta = Console.ReadKey().KeyChar;
             ValidarRespuesta.ValidaS_N(respuesta);
-            
-            while(ValidarRespuesta.ValidaS_N(respuesta) == true)
+
+            while (ValidarRespuesta.ValidaS_N(respuesta) == true)
             {
+                Console.WriteLine("");
                 Console.WriteLine("Ingrese numero a sumar: ");
                 int.TryParse(Console.ReadLine(), out n);
                 acumNumeros += n;
 
                 Console.WriteLine("Continuar? s/n");
                 respuesta = Console.ReadKey().KeyChar;
-                ValidarRespuesta.ValidaS_N(respuesta);   
-                
+                ValidarRespuesta.ValidaS_N(respuesta);
+
                 i++;
             }
 
+
+
+            Console.WriteLine("");
             Console.WriteLine($"La suma es: {acumNumeros}");
 
 

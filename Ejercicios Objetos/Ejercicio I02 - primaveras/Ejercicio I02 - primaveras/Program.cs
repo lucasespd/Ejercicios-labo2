@@ -13,7 +13,7 @@ namespace Ejercicio_I02___primaveras
         {
 
             Persona p1 = new Persona("Lucas",1995,17_133_113);
-            Persona p2 = new Persona("pepitopx",2008,17_133_1483);
+            Persona p2 = new Persona("pepitopx",2006,17_133_1483);
 
             Console.WriteLine(p1.Mostrar());
             Console.WriteLine(p2.Mostrar());

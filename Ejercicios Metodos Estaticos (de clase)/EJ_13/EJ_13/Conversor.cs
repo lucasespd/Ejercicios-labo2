@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EJ_13
 {
-    internal class Conversor
+    public class Conversor
     {
 
         /*Desarrollar una clase llamada Conversor, que posea dos métodos de clase (estáticos):

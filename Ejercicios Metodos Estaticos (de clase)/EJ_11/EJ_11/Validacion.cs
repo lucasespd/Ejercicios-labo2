@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EJ_11
 {
-    internal class Validacion
+    public class Validacion
     {
         /* Realizar una clase llamada Validación que posea un método estático llamado Validar, que posea la
                 siguiente firma: bool Validar(int valor, int min, int max):
@@ -15,7 +15,7 @@ namespace EJ_11
 
         public static bool Validar(int valor, int min, int max)
         {
-            if(valor > -101 && valor < 101)
+            if(valor >= min && valor <= max)
             {
                 return true;
             }

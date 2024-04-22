@@ -20,32 +20,42 @@ namespace Ejercicio_I05___Aprendete_las_tablas
             Mostrar en la consola el resultado.
              */
 
+            int numeroAMultiplicar;
+            string numeroString;
+
 
             Console.WriteLine("Ingrese el número que quiera la tabla de multiplicar: ");
-            int numeroAMultiplicar;
-            int.TryParse(Console.ReadLine(),out numeroAMultiplicar);
-            Console.WriteLine(TablaMultiplicarDe(numeroAMultiplicar));
+            
+            numeroString = Console.ReadLine();
+
+            if(int.TryParse(numeroString, out numeroAMultiplicar))
+            {
+                Console.WriteLine(TablaMultiplicarDe(numeroAMultiplicar));
+            }
+            else
+            {
+                Console.WriteLine("error papi");
+            }
+
+
 
             Console.ReadKey();
 
         }
 
             static string TablaMultiplicarDe(int numeroAMultiplicar)
-            {
-                
+            {               
                 StringBuilder sb = new StringBuilder();
                 Console.WriteLine($"Tabla de multiplicar del número {numeroAMultiplicar}:");
 
                 for (int i = 0; i < 10; i++)
                 {
                     sb.AppendLine($"{numeroAMultiplicar} x {i + 1} = {numeroAMultiplicar * (i + 1)}");
-                }
+                }    
+                
+                return sb.ToString(); 
             
-                return sb.ToString();
-                            
             }
-
-
 
     }
 }

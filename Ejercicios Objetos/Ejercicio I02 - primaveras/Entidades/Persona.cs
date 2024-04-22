@@ -88,7 +88,7 @@ namespace Entidades
 
         private string EsMayorEdad()
         {
-            if(CalcularEdad() > 18)
+            if(CalcularEdad() > 17)
             {
                 return "Es mayor de edad";
             }

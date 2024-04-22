@@ -7,7 +7,7 @@ using System.Xml.Schema;
 
 namespace EJ_15
 {
-    internal class Calculado
+    public class Calculado
     {
 
         /*
@@ -22,6 +22,7 @@ namespace EJ_15
         public static int Calcular(int primerNumero, int segundoNumero, char operacionMatematica)
         {
             int resultado;
+            
 
             switch (operacionMatematica)
             {
@@ -41,15 +42,16 @@ namespace EJ_15
                     }  
                     else
                     {
-                        resultado =  -1;
+                        resultado =  -1111111;
                     }
                     break;
                 default:
-                    resultado = 0;
+                    resultado = -111111;
                     break;
             }
 
             return resultado;
+            
         }
 
         private static bool Validar(int segundoNumero)

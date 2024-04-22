@@ -25,13 +25,35 @@ namespace EJ_15
                 TRUE si el número es distinto de CERO.
              */
 
+            int primerNumero;
+            string primerNumerostring;
+            int segundoNumero;
+            string segundoNumerostring;
+            char operacion;
 
-            Console.WriteLine(Calculado.Calcular(5, 5, '+')); 
-            Console.WriteLine(Calculado.Calcular(5, 5, '-')); 
-            Console.WriteLine(Calculado.Calcular(5, 5, '*')); 
-            Console.WriteLine(Calculado.Calcular(5, 5, '/')); 
-            Console.WriteLine(Calculado.Calcular(5, 0, '/')); 
-            
+
+            Console.WriteLine("******CALCULADORA******");
+            Console.WriteLine("Ingrese primer número:");
+            primerNumerostring = Console.ReadLine();
+            int.TryParse(primerNumerostring, out primerNumero);
+            Console.WriteLine("Ingrese segundo número:");
+            segundoNumerostring = Console.ReadLine();
+            int.TryParse(segundoNumerostring, out segundoNumero);
+            Console.WriteLine("Ingrese operación a realizar (+,-,*,/)");
+            operacion = Console.ReadKey().KeyChar;
+
+            Console.WriteLine("");
+            Console.WriteLine("******************");
+            //Console.WriteLine("RESULTADO:" + Calculado.Calcular(primerNumero,segundoNumero,operacion));
+            Console.WriteLine($"Resultado: {Calculado.Calcular(primerNumero,segundoNumero,operacion)}");
+
+
+            //Console.WriteLine(Calculado.Calcular(5, 5, '+')); 
+            //Console.WriteLine(Calculado.Calcular(5, 5, '-')); 
+            //Console.WriteLine(Calculado.Calcular(5, 5, '*')); 
+            //Console.WriteLine(Calculado.Calcular(5, 5, '/')); 
+            //Console.WriteLine(Calculado.Calcular(5, 0, '/')); 
+
 
 
             Console.ReadKey();

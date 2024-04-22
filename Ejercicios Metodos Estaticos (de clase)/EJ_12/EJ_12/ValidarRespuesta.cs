@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EJ_12
 {
-    internal class ValidarRespuesta
+    public class ValidarRespuesta
     {
 
         //El método devolverá un valor de tipo booleano, TRUE si se ingresó una 'S' y FALSE si se ingresó cualquier otro valor.
