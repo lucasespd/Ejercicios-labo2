@@ -47,12 +47,14 @@ namespace EJ_19
         }
         public static long operator + (Sumador s1, Sumador s2)
             {
-                return s1.cantidadSumas + s2.cantidadSumas;
+                //return s1.cantidadSumas + s2.cantidadSumas;
+                return (int)s1 + (int)s2;
             }
 
         public static bool operator | (Sumador s1,Sumador s2)
         {
-            return s1.cantidadSumas == s2.cantidadSumas;
+            //return s1.cantidadSumas == s2.cantidadSumas;
+            return (int)s1 == (int)s2;
         }
 
 

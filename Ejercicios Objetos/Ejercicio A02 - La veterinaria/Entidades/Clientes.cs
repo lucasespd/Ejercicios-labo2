@@ -30,7 +30,7 @@ namespace Entidades
 
         public void AgregarMascota(Mascota mascota)
         {
-            this.mascotas.Add(mascota); // Agregar una mascota a la lista
+            this.mascotas.Add(mascota); 
         }
 
         public string Nombre

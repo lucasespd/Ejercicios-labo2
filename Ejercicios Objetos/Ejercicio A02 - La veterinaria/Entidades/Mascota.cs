@@ -15,14 +15,14 @@ namespace Entidades
 
         private string especie;
         private string nombre;
-        private int fechaNacimiento;
+        private DateTime fechaNacimiento;
         private string vacunacion;
 
         public Mascota()
         {
 
         }
-        public Mascota(string especie, string nombre, int fechaNacimiento)
+        public Mascota(string especie, string nombre, DateTime fechaNacimiento)
         {
             this.especie = especie;
             this.nombre = nombre;
@@ -37,7 +37,7 @@ namespace Entidades
         {
             get { return this.nombre; }
         }
-        public int FechaNacimiento
+        public DateTime FechaNacimiento
         {
             get { return this.fechaNacimiento; }
         }
@@ -61,7 +61,7 @@ namespace Entidades
 
             sb.AppendLine($"Especie: {this.Especie}");
             sb.AppendLine($"Nombre: {this.Nombre}");
-            sb.AppendLine($"Nacimiento: {this.FechaNacimiento}");
+            sb.AppendLine($"Nacimiento: {this.FechaNacimiento.ToString("dd/MM/yyyy")}");
             if(this.Vacunacion != null)
             {
                 sb.AppendLine($"Vacunas: {this.Vacunacion}");

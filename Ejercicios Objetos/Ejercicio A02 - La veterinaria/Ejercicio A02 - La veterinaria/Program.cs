@@ -12,14 +12,14 @@ namespace Ejercicio_A02___La_veterinaria
         static void Main(string[] args)
         {
 
-            Mascota m1 = new Mascota("Perro", "pepitox", 2005);
-            Mascota m2 = new Mascota("Gato", "pepa", 2015);
+            Mascota m1 = new Mascota("Perro", "pepitox", new DateTime(2022,07,18));
+            Mascota m2 = new Mascota("Gato", "pepa", DateTime.Now);
             m2.Vacunacion = "Triple Felina";
 
-            Mascota m3 = new Mascota("Perro", "samuel", 2011);
+            Mascota m3 = new Mascota("Perro", "samuel", DateTime.Now);
             m3.Vacunacion = "Antirrábica";
 
-            Mascota m4 = new Mascota("Gato", "tarantino", 2017);
+            Mascota m4 = new Mascota("Gato", "tarantino", DateTime.Now);
             
 
             

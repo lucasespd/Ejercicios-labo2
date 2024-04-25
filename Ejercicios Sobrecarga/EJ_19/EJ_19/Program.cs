@@ -11,13 +11,14 @@ namespace EJ_19
         static void Main(string[] args)
         {
 
-            Sumador sumadorUno = new Sumador();
+            Sumador sumadorUno = new Sumador(3);
             Sumador sumadorDos = new Sumador(3);
 
             Console.WriteLine("El resultado de la suma es {0}", sumadorUno.Sumar(55,2));
-            Console.WriteLine("El resultado de la suma es {0}", sumadorDos.Sumar("5", "8"));
-            Console.WriteLine("La conversion es {0}", (int)sumadorDos);
-            Console.WriteLine("La cantidad de sumas entre los 2 es {0}", sumadorUno + sumadorDos);
+            Console.WriteLine("El resultado de la suma es {0}", sumadorDos.Sumar("hola ", "8"));
+            Console.WriteLine("La cantidad de sumas es {0}", (int)sumadorDos);
+            Console.WriteLine("La cantidad de sumas es {0}", (int)sumadorUno);
+            Console.WriteLine("La cantidad de sumas entre los dos es {0}", sumadorUno + sumadorDos);
             Console.WriteLine("Ambos tienen la misma cantidad de sumas? {0}", (sumadorUno | sumadorDos));
 
 
