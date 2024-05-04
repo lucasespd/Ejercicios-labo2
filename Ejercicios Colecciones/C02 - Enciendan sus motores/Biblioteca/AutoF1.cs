@@ -8,40 +8,70 @@ namespace Biblioteca
 {
     public class AutoF1
     {
-        private static short cantidadCombustible;
-        private static bool enCompetencia;
+        private short cantidadCombustible;
+        private bool enCompetencia;
         private string escuderia;
         private short numero;
-        private static short vueltasRestantes;
+        private short vueltasRestantes;
 
-        static AutoF1()
+        private AutoF1(bool enCompetencia, short cantidadCombustible, short vueltasRestantes)
         {
-            enCompetencia = false;
-            cantidadCombustible = 0;
-            vueltasRestantes = 0;
+            this.enCompetencia = enCompetencia;
+            this.cantidadCombustible = cantidadCombustible;
+            this.vueltasRestantes = vueltasRestantes;
         }
+        //private AutoF1()
+        //{
+        //    this.enCompetencia = false;
+        //    this.cantidadCombustible = 0;
+        //    this.vueltasRestantes = 0;
+        //}
 
-        public AutoF1(short numero,string escuderia)
+        public AutoF1(short numero,string escuderia):this(false,0,0)
         {
             this.numero = numero;
             this.escuderia = escuderia;
         }
 
         //prop
-        public short CantidadCombustible
+        //public short CantidadCombustible
+        //{
+        //    get { return cantidadCombustible; }
+        //    set { cantidadCombustible = value; }
+        //}
+        //public bool EnCompetencia
+        //{
+        //    get { return enCompetencia; }
+        //    set {  enCompetencia = value; }
+        //}
+        //public short VueltasRestantes
+        //{
+        //    get { return vueltasRestantes; }
+        //    set {  vueltasRestantes = value;}
+        //}
+        public short GetCantidadCombustible()
         {
-            get { return cantidadCombustible; }
-            set { cantidadCombustible = value; }
+            return this.cantidadCombustible;
         }
-        public bool EnCompetencia
+        public void SetCantidadCombustible(short valor)
         {
-            get { return enCompetencia; }
-            set {  enCompetencia = value; }
+            this.cantidadCombustible = valor;
         }
-        public short VueltasRestantes
+        public short GetVueltasRestantes()
         {
-            get { return vueltasRestantes; }
-            set {  vueltasRestantes = value;}
+            return this.vueltasRestantes;
+        }
+        public void SetVueltasRestantes(short valor)
+        {
+            this.vueltasRestantes = valor;
+        }
+        public bool GetEnCompetencia()
+        {
+            return this.enCompetencia;
+        }
+        public void SetEnCompetencia(bool estado)
+        {
+              this.enCompetencia = estado;
         }
 
         //sobrecargas
@@ -56,15 +86,27 @@ namespace Biblioteca
         }
 
         //metodos
+        //public string MostrarDatos()
+        //{
+        //    StringBuilder sb = new StringBuilder();
+
+        //    sb.AppendLine($"Escuderia: {this.escuderia}");
+        //    sb.AppendLine($"Numero: {this.numero}");
+        //    sb.AppendLine($"En competencia?: {this.EnCompetencia}");
+        //    sb.AppendLine($"Vueltas restantes: {this.VueltasRestantes}");
+        //    sb.AppendLine($"Cantidad de combustible: {this.CantidadCombustible}");
+
+        //    return sb.ToString();
+        //}
         public string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Escuderia: {this.escuderia}");
             sb.AppendLine($"Numero: {this.numero}");
-            sb.AppendLine($"En competencia?: {this.EnCompetencia}");
-            sb.AppendLine($"Vueltas restantes: {this.VueltasRestantes}");
-            sb.AppendLine($"Cantidad de combustible: {this.CantidadCombustible}");
+            sb.AppendLine($"En competencia?: {this.GetEnCompetencia()}");
+            sb.AppendLine($"Vueltas restantes: {this.GetVueltasRestantes()}");
+            sb.AppendLine($"Cantidad de combustible: {this.GetCantidadCombustible()}");
 
             return sb.ToString();
         }

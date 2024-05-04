@@ -45,10 +45,10 @@ namespace Biblioteca
                 if(c != a)
                 {
                     c.competidores.Add(a);
-                    a.EnCompetencia = true;
-                    a.VueltasRestantes = c.cantidadVueltas;
+                    a.SetEnCompetencia(true); //= true;
+                    a.SetVueltasRestantes(c.cantidadVueltas);// = c.cantidadVueltas;
                     Random rnd = new Random();
-                    a.CantidadCombustible = (short)rnd.Next(15,100);
+                    a.SetCantidadCombustible((short)rnd.Next(15, 100));// = (short)rnd.Next(15,100);
                     return true;
                 }
             }         
