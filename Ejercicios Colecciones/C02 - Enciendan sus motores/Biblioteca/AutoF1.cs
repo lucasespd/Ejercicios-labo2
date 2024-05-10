@@ -27,7 +27,8 @@ namespace Biblioteca
         //    this.vueltasRestantes = 0;
         //}
 
-        public AutoF1(short numero,string escuderia):this(false,0,0)
+        public AutoF1(short numero,string escuderia)
+            :this(false,0,0)
         {
             this.numero = numero;
             this.escuderia = escuderia;

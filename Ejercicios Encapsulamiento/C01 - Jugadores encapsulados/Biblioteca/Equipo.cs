@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using System.Text;
+﻿using System.Text;
 
 namespace Biblioteca
 {
@@ -13,13 +12,13 @@ namespace Biblioteca
         {
             jugadores = new List<Jugador>();
         }
-        public Equipo(short cantidad,string nombre)
-            :this() 
+        public Equipo(short cantidad, string nombre)
+            : this()
         {
             this.cantidadJugadores = cantidad;
             this.nombre = nombre;
         }
-     
+
         //propiedad indexada
 
         //public Jugador this[int indice]
@@ -37,11 +36,11 @@ namespace Biblioteca
         //sobrecargas
         public static bool operator +(Equipo e, Jugador j)
         {
-            if(e.jugadores.Count < e.cantidadJugadores)
+            if (e.jugadores.Count < e.cantidadJugadores)
             {
                 foreach (Jugador jugador in e.jugadores)
                 {
-                    if(jugador == j)
+                    if (jugador == j)
                     {
                         return false;
                     }
@@ -53,8 +52,8 @@ namespace Biblioteca
             else
             {
                 return false;
-            }      
-                       
+            }
+
         }
 
         public string MostrarEquipo()
@@ -66,12 +65,10 @@ namespace Biblioteca
 
             foreach (Jugador jugador in this.jugadores)
             {
-               sb.AppendLine(jugador.MostrarDatos());
+                sb.AppendLine(jugador.MostrarDatos());
             }
-            
+
             return sb.ToString();
         }
-
-
     }
 }

@@ -16,7 +16,7 @@ namespace I01___El_viajar_es_un_placer
         private short cantidadMarchas;
         private int cantidadPasajeros;
 
-       public Automovil(short cantidadPuertas, short cantidadRuedas,string color,short cantidadMarchas,int cantidadPasajeros)
+       public Automovil(short cantidadPuertas, short cantidadRuedas,Colores color,short cantidadMarchas,int cantidadPasajeros)
             :base(cantidadPuertas,cantidadRuedas,color)
         {
             this.cantidadMarchas = cantidadMarchas;
@@ -27,6 +27,7 @@ namespace I01___El_viajar_es_un_placer
         {
             StringBuilder sb = new StringBuilder();
 
+            sb.AppendLine("-----AUTO-----");
             sb.AppendLine($"Puertas: {base.CantidadPuertas}");
             sb.AppendLine($"Ruedas: {base.CantidadRuedas}");
             sb.AppendLine($"Color: {base.Color}");

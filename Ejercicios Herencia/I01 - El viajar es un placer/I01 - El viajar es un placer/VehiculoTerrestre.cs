@@ -16,9 +16,9 @@ namespace I01___El_viajar_es_un_placer
 
         protected short cantidadPuertas;
         protected short cantidadRuedas;
-        protected string color;
+        protected Colores color;
 
-        public VehiculoTerrestre(short cantidadPuertas, short cantidadRuedas, string color)
+        public VehiculoTerrestre(short cantidadPuertas, short cantidadRuedas, Colores color)
         {
             this.cantidadPuertas = cantidadPuertas;
             this.cantidadRuedas = cantidadRuedas;
@@ -33,9 +33,21 @@ namespace I01___El_viajar_es_un_placer
         {
             get { return cantidadRuedas; }
         }
-        public string Color
+        public Colores Color
         {
             get { return this.color; }
         }
+
+        public string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Cantidad de puertas: {this.cantidadPuertas}");
+            sb.AppendLine($"Cantidad de ruedas: {this.cantidadRuedas}");
+            sb.AppendLine($"Color: {this.color}");
+
+            return sb.ToString();
+        }
+
     }
 }
