@@ -53,6 +53,7 @@
             btnFacturacionTotal.TabIndex = 1;
             btnFacturacionTotal.Text = "Facturación Total";
             btnFacturacionTotal.UseVisualStyleBackColor = true;
+            btnFacturacionTotal.Click += btnFacturacionTotal_Click;
             // 
             // btnFacturacionLocal
             // 
@@ -62,6 +63,7 @@
             btnFacturacionLocal.TabIndex = 2;
             btnFacturacionLocal.Text = "Facturación Local";
             btnFacturacionLocal.UseVisualStyleBackColor = true;
+            btnFacturacionLocal.Click += btnFacturacionLocal_Click;
             // 
             // btnFacturacionProvincial
             // 
@@ -71,6 +73,7 @@
             btnFacturacionProvincial.TabIndex = 3;
             btnFacturacionProvincial.Text = "Facturación Provincial";
             btnFacturacionProvincial.UseVisualStyleBackColor = true;
+            btnFacturacionProvincial.Click += btnFacturacionProvincial_Click;
             // 
             // btnSalir
             // 
@@ -80,6 +83,7 @@
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // FmrMenu
             // 
@@ -92,7 +96,9 @@
             Controls.Add(btnFacturacionTotal);
             Controls.Add(btnGenerarLlamada);
             Name = "FmrMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Central Telefonica";
+            Load += FmrMenu_Load;
             ResumeLayout(false);
         }
 

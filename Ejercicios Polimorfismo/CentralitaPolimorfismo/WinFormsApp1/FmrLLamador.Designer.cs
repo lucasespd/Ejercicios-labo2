@@ -59,6 +59,7 @@
             txtNroDestino.Size = new Size(328, 35);
             txtNroDestino.TabIndex = 0;
             txtNroDestino.Text = "Nro Destino";
+            txtNroDestino.TextChanged += txtNroDestino_TextChanged;
             // 
             // gpbPanel
             // 
@@ -90,6 +91,7 @@
             btnNumeral.TabIndex = 11;
             btnNumeral.Text = "#";
             btnNumeral.UseVisualStyleBackColor = true;
+            btnNumeral.Click += btnNumeral_Click;
             // 
             // btnCero
             // 
@@ -100,6 +102,7 @@
             btnCero.TabIndex = 10;
             btnCero.Text = "0";
             btnCero.UseVisualStyleBackColor = true;
+            btnCero.Click += btnCero_Click;
             // 
             // btnAsterisco
             // 
@@ -110,6 +113,7 @@
             btnAsterisco.TabIndex = 9;
             btnAsterisco.Text = "*";
             btnAsterisco.UseVisualStyleBackColor = true;
+            btnAsterisco.Click += btnAsterisco_Click;
             // 
             // btnNueve
             // 
@@ -120,6 +124,7 @@
             btnNueve.TabIndex = 8;
             btnNueve.Text = "9";
             btnNueve.UseVisualStyleBackColor = true;
+            btnNueve.Click += btnNueve_Click;
             // 
             // btnOcho
             // 
@@ -130,6 +135,7 @@
             btnOcho.TabIndex = 7;
             btnOcho.Text = "8";
             btnOcho.UseVisualStyleBackColor = true;
+            btnOcho.Click += btnOcho_Click;
             // 
             // btnSiete
             // 
@@ -140,6 +146,7 @@
             btnSiete.TabIndex = 6;
             btnSiete.Text = "7";
             btnSiete.UseVisualStyleBackColor = true;
+            btnSiete.Click += btnSiete_Click;
             // 
             // btnSeis
             // 
@@ -150,6 +157,7 @@
             btnSeis.TabIndex = 5;
             btnSeis.Text = "6";
             btnSeis.UseVisualStyleBackColor = true;
+            btnSeis.Click += btnSeis_Click;
             // 
             // btnCinco
             // 
@@ -160,6 +168,7 @@
             btnCinco.TabIndex = 4;
             btnCinco.Text = "5";
             btnCinco.UseVisualStyleBackColor = true;
+            btnCinco.Click += btnCinco_Click;
             // 
             // btnCuatro
             // 
@@ -170,6 +179,7 @@
             btnCuatro.TabIndex = 3;
             btnCuatro.Text = "4";
             btnCuatro.UseVisualStyleBackColor = true;
+            btnCuatro.Click += btnCuatro_Click;
             // 
             // btnTres
             // 
@@ -180,6 +190,7 @@
             btnTres.TabIndex = 2;
             btnTres.Text = "3";
             btnTres.UseVisualStyleBackColor = true;
+            btnTres.Click += btnTres_Click;
             // 
             // btnDos
             // 
@@ -191,6 +202,7 @@
             btnDos.TabIndex = 1;
             btnDos.Text = "2";
             btnDos.UseVisualStyleBackColor = false;
+            btnDos.Click += btnDos_Click;
             // 
             // btnUno
             // 
@@ -204,6 +216,7 @@
             btnUno.TabIndex = 0;
             btnUno.Text = "1";
             btnUno.UseVisualStyleBackColor = false;
+            btnUno.Click += btnUno_Click;
             // 
             // btnLlamar
             // 
@@ -216,6 +229,7 @@
             btnLlamar.TabIndex = 2;
             btnLlamar.Text = "Llamar";
             btnLlamar.UseVisualStyleBackColor = false;
+            btnLlamar.Click += btnLlamar_Click;
             // 
             // btnLimpiar
             // 
@@ -273,6 +287,7 @@
             Controls.Add(gpbPanel);
             Controls.Add(txtNroDestino);
             Name = "FmrLLamador";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Llamador";
             TransparencyKey = SystemColors.ActiveCaption;
             Load += FmrLLamador_Load;

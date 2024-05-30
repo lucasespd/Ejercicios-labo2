@@ -13,11 +13,17 @@ namespace WinFormsApp1
 {
     public partial class FmrMostrar : Form
     {
-        private Centralita centralita;
+
+        private Llamada.ETipoLlamada tipo;
+
         public FmrMostrar(Centralita centralita)
         {
             InitializeComponent();
-            this.centralita = centralita;
+
+            if(tipo == Llamada.ETipoLlamada.Local)
+            {
+                rtbMostrar.Text = centralita.
+            }
         }
     }
 }
