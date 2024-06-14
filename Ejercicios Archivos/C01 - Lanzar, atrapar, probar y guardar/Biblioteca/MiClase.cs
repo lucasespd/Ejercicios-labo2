@@ -3,16 +3,16 @@
     public class MiClase
     {
 
-        public static void Metodo()
+        public static void MiMetodoEstatico()
         {
-            throw new DivideByZeroException();
+            throw new DivideByZeroException("MetodoEstatico Division por cero");
         }
 
         public MiClase()
         {
             try
             {
-                MiClase.Metodo();
+                MiClase.MiMetodoEstatico();
             }
             catch (DivideByZeroException ex)
             {
@@ -20,7 +20,7 @@
             }
         }
 
-        public MiClase(int n1)
+        public MiClase(int num1)
         {
             try
             {

@@ -12,7 +12,7 @@ namespace Consola
             {
                 //Archivo.Escribir("Laboratorio");
                 //Console.WriteLine(Archivo.Leer());
-                //ArchivoDos.Escribir();
+                ArchivoDos.Escribir();
                 //Console.WriteLine(ArchivoDos.Leer());
 
                 //Personaje pj1 = new Personaje("Pepex",5);
@@ -24,7 +24,7 @@ namespace Consola
 
                 //SerializadoraJson.Escribir(masc1);
 
-                Console.WriteLine(SerializadoraJson.Leer()); 
+                //Console.WriteLine(SerializadoraJson.Leer()); 
 
             }
             catch (Exception ex)

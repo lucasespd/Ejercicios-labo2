@@ -31,6 +31,7 @@ namespace ArchivosUno
                 }
 
                 string datos = "Otra forma de escribir archivos";
+                
 
                 //No hace falta usar using porque el metodo WriteAllText ya lo implementa.
                 File.WriteAllText(completa,datos);

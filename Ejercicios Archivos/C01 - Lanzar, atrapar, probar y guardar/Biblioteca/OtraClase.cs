@@ -8,7 +8,7 @@ namespace Biblioteca
 {
     public class OtraClase
     {
-        public void MetodoOtraClase()
+        public void MetodoInstancia()
         {
             try
             {

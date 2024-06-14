@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca
 {
-    public class MiExcepcion : Exception
+    public class MiExcepcion: Exception
     {
 
         public MiExcepcion(string mensaje)
