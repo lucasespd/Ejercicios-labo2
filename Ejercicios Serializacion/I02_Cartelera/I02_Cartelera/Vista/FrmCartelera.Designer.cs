@@ -165,6 +165,7 @@ namespace Vista
             btnGuardarConfiguracion.TabIndex = 6;
             btnGuardarConfiguracion.Text = "Guardar configuración";
             btnGuardarConfiguracion.UseVisualStyleBackColor = false;
+            btnGuardarConfiguracion.Click += btnGuardarConfiguracion_Click;
             // 
             // btnImportarConfiguracion
             // 
@@ -178,6 +179,7 @@ namespace Vista
             btnImportarConfiguracion.TabIndex = 7;
             btnImportarConfiguracion.Text = "Importar configuración";
             btnImportarConfiguracion.UseVisualStyleBackColor = false;
+            btnImportarConfiguracion.Click += btnImportarConfiguracion_Click;
             // 
             // btnColorTitulo
             // 
@@ -212,6 +214,7 @@ namespace Vista
             btnEliminarConfiguracion.TabIndex = 8;
             btnEliminarConfiguracion.Text = "Eliminar configuración";
             btnEliminarConfiguracion.UseVisualStyleBackColor = false;
+            btnEliminarConfiguracion.Click += btnEliminarConfiguracion_Click;
             // 
             // FrmCartelera
             // 
