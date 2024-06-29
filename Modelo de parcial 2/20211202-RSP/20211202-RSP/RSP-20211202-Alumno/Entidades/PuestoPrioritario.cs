@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Excepciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,8 +17,89 @@ namespace Entidades
 //      De lo contrario retira el primer cliente de la Queue y verifica si este puede ser atendido de forma prioritaria.
 //      En caso afirmativo retornar Cliente Atendido en… Concatenando el nombre del puesto de atención.
 //      En caso negativo se lanzará una excepción ClienteNoAtendidoException. 
-
-    public class PuestoPrioritario
+    
+    public class PuestoPrioritario: IAtendedor
     {
+        public enum ETipo
+        {
+           MAX_UNIDADES,
+           ATN_ESpecial
+        }
+        private int cantProductos;
+        private Queue<Cliente> filaClientes;
+        private ETipo tipo;
+      
+        public PuestoPrioritario(ETipo tipo,int cantProductos)
+        {
+            this.tipo = tipo;
+            this.cantProductos = cantProductos;
+            this.filaClientes = new Queue<Cliente>();
+        }
+        public PuestoPrioritario():this(ETipo.MAX_UNIDADES,15)
+        {
+        }
+        //Propiedades
+        public Queue<Cliente> FilaClientes
+        {
+            get
+            {
+                return this.filaClientes;
+            }
+            set
+            {
+                this.filaClientes = value;
+            }
+        }
+
+        public string NombrePuestoAtencion
+        {
+            get { return $"Puesto de atencion Prioritario de tipo {this.Tipo}"; }
+        }
+        public ETipo Tipo
+        {
+            get
+            {
+                return this.tipo;
+            }
+        }
+
+        //Metodos
+        public string AtenderClientes()
+        {
+            string retorno = "";
+
+           if(this.FilaClientes.Count < 1)
+            {
+                retorno =  "Sin clientes";
+            }
+            else
+            {
+                Cliente c = this.FilaClientes.Dequeue();
+                if(this == c)
+                {
+                    retorno =  $"Cliente atentido en {this.NombrePuestoAtencion}";
+                }
+                else
+                {
+                    throw new ClienteNoAtendidoException();
+                }
+            }
+
+            return retorno;
+        }
+        //Sobrecargas
+        public static bool operator ==(PuestoPrioritario puesto, Cliente cliente)
+        {
+            if(puesto.tipo == ETipo.ATN_ESpecial && cliente.Prioridad == true || puesto.Tipo == ETipo.MAX_UNIDADES && cliente.CantProductos <= 15)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool operator !=(PuestoPrioritario puesto, Cliente cliente)
+        {
+            return !(puesto == cliente);
+        }
+
     }
 }

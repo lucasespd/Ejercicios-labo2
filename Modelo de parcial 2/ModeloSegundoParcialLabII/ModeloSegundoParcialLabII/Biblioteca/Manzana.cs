@@ -39,15 +39,25 @@ namespace Biblioteca
             }
         }
 
+
         bool IDeserializar.Xml(string path, out Fruta fruta)
-        {
-            bool returnAux = false;
-            using (StreamReader sr = new StreamReader(path))
+        {         
+            try
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Manzana));
-                xmlSerializer.Deserialize(sr) as fruta;
-            }
 
+                using (StreamReader streamReader = new StreamReader(path))
+                {
+                    fruta = (Manzana)xmlSerializer.Deserialize(streamReader);
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                fruta = null;
+                return false;
+            }
         }
 
         public bool Xml(string path)
