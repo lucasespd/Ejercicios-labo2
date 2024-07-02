@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClassLibrary1;
+using System;
 using System.Windows.Forms;
 
 namespace SP
 {
-    private Manzana _manzana;
-    private Banana _banana;
-    private Durazno _durazno;
-
-    public Cajon<Manzana> c_manzanas;
-    public Cajon<Banana> c_bananas;
-    public Cajon<Durazno> c_duraznos;
+    
 
     public partial class ModeloSegundoParcial : Form
     {
+        private Manzana _manzana;
+        private Banana _banana;
+        private Durazno _durazno;
+
+        public Cajon<Manzana> c_manzanas;
+        public Cajon<Banana> c_bananas;
+        public Cajon<Durazno> c_duraznos;
         public ModeloSegundoParcial()
         {
             InitializeComponent();
@@ -117,6 +111,17 @@ namespace SP
         {
             //implementar estructura de manejo de excepciones
             // AGREGAR
+            try
+            {
+                _ = c_manzanas + new Manzana("verde",2,"Tucuman");
+                _ = c_bananas + new Banana("verde", 3, "El salvador");
+                _ = c_duraznos + new Durazno("negro", 5, 18);
+            }
+            catch (Exception ex)
+            {
+
+                throw new CajonLlenoException(ex.Message);
+            }
                
         }
 

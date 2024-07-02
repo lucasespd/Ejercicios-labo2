@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Biblioteca
+namespace ClassLibrary1
 {
-    public class Manzana: Fruta,ISerializar,IDeserializar
+    public class Manzana : Fruta, ISerializar, IDeserializar
     {
         protected string provinciaOrigen;
 
@@ -16,8 +16,8 @@ namespace Biblioteca
         {
 
         }
-        public Manzana(string color,double peso,string provinciaOrigen)
-            :base(color,peso)
+        public Manzana(string color, double peso, string provinciaOrigen)
+            : base(color, peso)
         {
             this.provinciaOrigen = provinciaOrigen;
         }
@@ -34,7 +34,7 @@ namespace Biblioteca
         public override bool TieneCarozo
         {
             get
-            {              
+            {
                 return false;
             }
             set
@@ -44,7 +44,7 @@ namespace Biblioteca
         }
 
         bool IDeserializar.Xml(string path, out Fruta fruta)
-        {         
+        {
             try
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Manzana));
@@ -90,6 +90,6 @@ namespace Biblioteca
         {
             return this.FrutasToString();
         }
-      
+
     }
 }
